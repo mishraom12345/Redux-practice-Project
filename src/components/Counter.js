@@ -3,9 +3,9 @@ import { counterActions } from '../store/Redux';
 import classes from './Counter.module.css';
 
 const Counter = () => {
-  const counter = useSelector(state=>state.counter)
+  const counter = useSelector(state=>state.counter.counter)
   const dispatch = useDispatch()
-  const show = useSelector(state=>state.showcounter)
+  const show = useSelector(state=>state.counter.showcounter)
 
   const incrementhandler = ()=>{
     dispatch(counterActions.increment())
